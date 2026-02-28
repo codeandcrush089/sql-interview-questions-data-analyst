@@ -233,3 +233,137 @@ DROP TABLE employees;
 | DROP     | Yes                 | Yes                     | No            |
 
 
+# Q 7. What is the difference between WHERE and HAVING?
+
+Both are used to filter data, but they work at different stages of a query.
+
+**WHERE**
+
+* Filters rows **before aggregation**
+* Cannot be used with aggregate functions
+
+Example
+
+```sql
+SELECT *
+FROM employees
+WHERE salary > 50000;
+```
+
+**HAVING**
+
+* Filters data **after GROUP BY**
+* Works with aggregate functions
+
+Example
+
+```sql
+SELECT department, COUNT(*)
+FROM employees
+GROUP BY department
+HAVING COUNT(*) > 5;
+```
+
+**Quick Difference**
+
+* `WHERE` → filters rows
+* `HAVING` → filters grouped results
+
+# Q 8. Difference between CHAR and VARCHAR.
+
+Both are used to store text data in SQL, but they handle storage differently.
+
+**CHAR**
+
+* Fixed-length data type
+* Always uses the defined size
+* Faster for fixed-size values
+
+Example
+
+```sql
+name CHAR(10)
+```
+
+If you store `"Ram"`, the remaining space is padded.
+
+**VARCHAR**
+
+* Variable-length data type
+* Uses only the required storage
+* Better for variable text
+
+Example
+
+```sql
+name VARCHAR(10)
+```
+
+Stores only the actual characters.
+
+**Quick Difference**
+
+| CHAR                          | VARCHAR                |
+| ----------------------------- | ---------------------- |
+| Fixed length                  | Variable length        |
+| Wastes space if text is short | Saves storage          |
+| Faster for fixed values       | Flexible for text data |
+
+**Example**
+
+```sql
+CREATE TABLE users (
+  code CHAR(5),
+  name VARCHAR(50)
+);
+```
+
+
+# Q 9. What is NULL? How is it different from zero or blank?
+
+**NULL** represents a **missing or unknown value** in a database. It means the value is not stored or not available.
+
+**Key Differences**
+
+* **NULL** → No value / unknown value
+* **0 (Zero)** → A numeric value
+* **Blank ('')** → An empty text value
+
+**Example**
+
+```sql
+SELECT *
+FROM employees
+WHERE manager_id IS NULL;
+```
+
+This query finds employees who **do not have a manager assigned**.
+
+**Important**
+
+* `NULL` cannot be compared using `=`
+* Use `IS NULL` or `IS NOT NULL`.
+
+# Q 10. Can a table have multiple primary keys?
+
+No, a table can have **only one Primary Key**.
+However, that primary key can consist of **multiple columns**, called a **composite primary key**.
+
+**Key Points**
+
+* Only **one primary key constraint** per table
+* Can include **one or more columns**
+* Ensures **unique identification of rows**
+
+**Example (Composite Primary Key)**
+
+```sql
+CREATE TABLE order_items (
+  order_id INT,
+  product_id INT,
+  quantity INT,
+  PRIMARY KEY (order_id, product_id)
+);
+```
+
+Here, the combination of `order_id` and `product_id` uniquely identifies each row.
