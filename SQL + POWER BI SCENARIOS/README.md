@@ -1,4 +1,4 @@
-# Q 111. How SQL is used in Power BI?
+# Q 1. How SQL is used in Power BI?
 # Q 112. Difference between SQL aggregation and DAX aggregation.
 # Q 113. When do you push logic to SQL vs Power BI?
 # Q 114. Write SQL for running total and compare with DAX.
