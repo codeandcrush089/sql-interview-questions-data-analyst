@@ -1,4 +1,12 @@
-# Q 1. How SQL is used in Power BI?
+<div align="center">
+
+
+# 📊⚡  SQL + POWER BI SCENARIOS
+**SQL + Power BI Scenarios** show how SQL queries are used to prepare and analyze data for Power BI dashboards and reports. 📊⚡
+
+</div>
+
+## Q 1. How SQL is used in Power BI?
 
 SQL is used in Power BI to **retrieve, filter, and prepare data from databases** before creating reports and dashboards.
 
@@ -35,7 +43,7 @@ GROUP BY department;
 Using SQL before loading data helps **reduce data size and improve Power BI dashboard performance**.
 
 ---
-# Q 2. Difference between SQL aggregation and DAX aggregation.
+## Q 2. Difference between SQL aggregation and DAX aggregation.
 
 Both SQL and DAX are used to aggregate data, but they work at different stages.
 
@@ -71,8 +79,7 @@ Total Sales = SUM(Sales[sales_amount])
 * **DAX** → used for calculations in reports.
 
 ---
-# Q 3. When do you push logic to SQL vs Power BI?
-### When do you push logic to SQL vs Power BI?
+## Q 3. When do you push logic to SQL vs Power BI?
 
 Deciding where to apply logic depends on **performance and use case**.
 
@@ -108,7 +115,7 @@ Total Sales = SUM(Sales[sales_amount])
 * **Power BI (DAX)** → interactive calculations in reports.
 
 ---
-# Q 4. Write SQL for running total and compare with DAX.
+## Q 4. Write SQL for running total and compare with DAX.
 
 A running total calculates the **cumulative sum of values over time**.
 
@@ -149,7 +156,7 @@ CALCULATE(
 | Uses **window functions** | Uses **CALCULATE + FILTER**  |
 
 ---
-# Q 5. How SQL helps reduce Power BI model size?
+## Q 5. How SQL helps reduce Power BI model size?
 
 SQL can reduce Power BI model size by **preparing and filtering data before loading it into Power BI**.
 
@@ -186,7 +193,7 @@ GROUP BY department;
 Using SQL for **filtering, selecting, and aggregating data** reduces the amount of data loaded, which **improves Power BI performance and reduces model size**.
 
 ---
-# Q 6. Import vs DirectQuery impact on SQL.
+## Q 6. Import vs DirectQuery impact on SQL.
 
 Power BI supports two main data connection modes: **Import** and **DirectQuery**.
 
@@ -227,7 +234,7 @@ WHERE order_date >= '2025-01-01';
 DirectQuery requires **well-optimized SQL queries and indexes** for good performance.
 
 ---
-# Q 7. How to debug SQL query used in Power BI?
+## Q 7. How to debug SQL query used in Power BI?
 
 Debugging SQL queries helps identify **errors or performance issues** in Power BI reports.
 
@@ -254,7 +261,7 @@ Power BI provides **Query Diagnostics** to analyze query execution.
 Always test SQL queries **directly in the database first** to ensure they work correctly and run efficiently.
 
 ---
-# Q 8. SQL vs Power Query – where to clean data?
+## Q 8. SQL vs Power Query – where to clean data?
 
 Data cleaning can be done in **SQL or Power Query**, depending on the situation.
 
@@ -293,7 +300,7 @@ Examples:
 Perform **major cleaning in SQL**, and use **Power Query for minor transformations**.
 
 ---
-# Q 9. Real production SQL issue you faced.
+## Q 9. Real production SQL issue you faced.
 
 A common real-world SQL issue occurs when **duplicate records or incorrect joins cause wrong report results**.
 
@@ -328,7 +335,7 @@ GROUP BY c.customer_name;
 * Verify results to avoid **duplicate counting in reports**.
 
 ---
-# Q 10. End-to-end SQL → Power BI reporting flow.
+## Q 10. End-to-end SQL → Power BI reporting flow.
 
 This describes how data moves from a **database to a Power BI dashboard**.
 
