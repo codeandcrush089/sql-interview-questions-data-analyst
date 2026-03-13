@@ -1,4 +1,13 @@
-# Q 1. What is ORDER BY?
+<div align="center">
+
+
+# 🔽📊 SORTING & LIMITING DATA
+**Sorting & Limiting Data** help organize query results and control how many rows are returned. 🔽📊
+
+</div>
+
+---
+## Q 1. What is ORDER BY?
 
 `ORDER BY` is used to **sort query results** based on one or more columns.
 
@@ -18,7 +27,8 @@ ORDER BY salary DESC;
 
 This query returns employees sorted by **highest salary first**.
 
-# Q 2. Difference between ASC and DESC.
+---
+## Q 2. Difference between ASC and DESC.
 
 Both are used with `ORDER BY` to control how results are sorted.
 
@@ -52,7 +62,8 @@ ORDER BY salary DESC;
 * `ASC` → Low → High (A → Z, 0 → 9)
 * `DESC` → High → Low (Z → A, 9 → 0)
 
-# Q 3. How do you fetch the latest 10 records from a table?
+---
+## Q 3. How do you fetch the latest 10 records from a table?
 
 Sort the records by a **date or ID column in descending order** and limit the result.
 
@@ -78,7 +89,8 @@ ORDER BY created_at DESC;
 * `ORDER BY ... DESC` → latest records first
 * `LIMIT / TOP` → returns only 10 rows.
 
-# Q 4. Difference between TOP, LIMIT, and FETCH FIRST.
+---
+## Q 4. Difference between TOP, LIMIT, and FETCH FIRST.
 
 All are used to **restrict the number of rows returned** by a query, but they belong to different SQL systems.
 
@@ -127,7 +139,8 @@ FETCH FIRST 5 ROWS ONLY;
 | LIMIT       | MySQL, PostgreSQL       |
 | FETCH FIRST | Oracle, DB2, PostgreSQL |
 
-# Q 5. How do you get the second highest salary?
+---
+## Q 5. How do you get the second highest salary?
 
 Use a subquery to find the maximum salary less than the highest salary.
 
@@ -145,7 +158,8 @@ WHERE salary < (SELECT MAX(salary) FROM employees);
 * Second query returns the next highest value
 * Common SQL interview question.
 
-# Q 6. How to retrieve the Nth highest salary?
+---
+## Q 6. How to retrieve the Nth highest salary?
 
 You can use `ORDER BY` with `LIMIT` and `OFFSET`.
 
@@ -168,7 +182,8 @@ LIMIT 1 OFFSET 2;
 
 Nth highest salary → `OFFSET N-1`.
 
-# Q 7. Can you sort data using column position?
+---
+## Q 7. Can you sort data using column position?
 
 Yes. SQL allows sorting using the **column position number** in the `SELECT` list.
 
@@ -189,8 +204,8 @@ ORDER BY 2 DESC;
 
 Although valid, using **column names is recommended** because it makes queries easier to read and maintain.
 
-# Q 8. What happens if ORDER BY is not used?
-
+---
+## Q 8. What happens if ORDER BY is not used?
 
 If `ORDER BY` is not used, the database returns results in **no guaranteed order**.
 
@@ -209,7 +224,8 @@ FROM employees;
 
 The result may not be sorted by **ID, name, or salary** unless `ORDER BY` is specified.
 
-# Q 9. Sort employees by department and salary descending.
+---
+## Q 9. Sort employees by department and salary descending.
 
 Use `ORDER BY` with multiple columns.
 
@@ -227,7 +243,8 @@ ORDER BY department ASC, salary DESC;
 * Within each department, sorts by **salary (highest first)**
 * Multiple columns can be used in `ORDER BY`.
 
-# Q 10. Why is sorting important in reports?
+---
+## Q 10. Why is sorting important in reports?
 
 Sorting organizes data in a **clear and meaningful order**, making reports easier to read and analyze.
 
