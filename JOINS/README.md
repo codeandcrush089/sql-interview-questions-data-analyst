@@ -1,4 +1,12 @@
-# Q 1. What is a JOIN?
+<div align="center">
+
+
+# 🔗📊 JOIN
+**JOIN** is used to combine data from two or more tables based on a related column. 🔗📊
+
+</div>
+
+## Q 1. What is a JOIN?
 
 A `JOIN` is used to **combine rows from two or more tables** based on a related column.
 
@@ -19,8 +27,8 @@ ON employees.department_id = departments.id;
 
 This query combines **employees** and **departments** tables to show each employee's department.
 
-# Q 2. Types of joins in SQL.
-### Types of Joins in SQL
+---
+## Q 2. Types of joins in SQL.
 
 Joins are used to **combine data from multiple tables**. The main types of joins are:
 
@@ -60,7 +68,8 @@ Returns all rows from both tables, matching where possible.
 **5️⃣ CROSS JOIN**
 Returns the **Cartesian product** (every row from one table combined with every row from another table).
 
-# Q 3. Difference between INNER JOIN and LEFT JOIN.
+---
+## Q 3. Difference between INNER JOIN and LEFT JOIN.
 
 Both are used to combine data from two tables, but they return different results.
 
@@ -97,7 +106,8 @@ ON e.department_id = d.id;
 * `INNER JOIN` → Only matching records
 * `LEFT JOIN` → All records from left table + matching from right table
 
-# Q 4. When will LEFT JOIN return NULL?
+---
+## Q 4. When will LEFT JOIN return NULL?
 
 `LEFT JOIN` returns `NULL` when there is **no matching record in the right table**.
 
@@ -117,7 +127,8 @@ ON e.department_id = d.id;
 
 If an employee has **no matching department**, `department_name` will appear as **NULL**.
 
-# Q 5. Difference between LEFT JOIN and RIGHT JOIN.
+---
+## Q 5. Difference between LEFT JOIN and RIGHT JOIN.
 
 Both joins return matching rows from two tables, but they differ in **which table's unmatched rows are kept**.
 
@@ -156,7 +167,8 @@ ON e.department_id = d.id;
 * `LEFT JOIN` → keeps all rows from **left table**
 * `RIGHT JOIN` → keeps all rows from **right table**
 
-# Q 6. What is a FULL OUTER JOIN?
+---
+## Q 6. What is a FULL OUTER JOIN?
 
 A **FULL OUTER JOIN** returns **all rows from both tables**.
 If there is a match, the rows are combined. If there is no match, the missing side returns **NULL**.
@@ -178,7 +190,8 @@ ON e.department_id = d.id;
 
 This query returns **all employees and all departments**, even if there is no match between them.
 
-# Q 7. What is a SELF JOIN? Give example.
+---
+## Q 7. What is a SELF JOIN? Give example.
 
 A **SELF JOIN** is a join where a table is joined **with itself**.
 It is useful when rows in the same table are related.
@@ -199,7 +212,8 @@ ON e.manager_id = m.id;
 
 This query shows **each employee with their manager** from the same table.
 
-# Q 8. What is a CROSS JOIN?
+---
+## Q 8. What is a CROSS JOIN?
 
 A **CROSS JOIN** returns the **Cartesian product** of two tables.
 Each row from the first table is combined with **every row from the second table**.
@@ -220,7 +234,8 @@ CROSS JOIN sizes;
 
 If `colors` has **3 rows** and `sizes` has **4 rows**, the result will have **12 rows**.
 
-# Q 9. Difference between JOIN and SUBQUERY.
+---
+## Q 9. Difference between JOIN and SUBQUERY.
 
 Both are used to retrieve data from multiple tables, but they work differently.
 
@@ -260,7 +275,8 @@ WHERE department_id IN (
 * `JOIN` → combines tables directly
 * `SUBQUERY` → query inside another query
 
-# Q 10. Fetch employee name and department name from two tables.
+---
+## Q 10. Fetch employee name and department name from two tables.
 
 Use a `JOIN` to combine data from the **employees** and **departments** tables.
 
