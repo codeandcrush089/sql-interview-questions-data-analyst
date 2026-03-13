@@ -1,4 +1,16 @@
-# Q 1. What are aggregate functions in SQL?
+<div align="center">
+
+
+# 🔢 AGGREGATE FUNCTIONS  
+
+
+</div>
+
+---
+
+
+  
+## Q 1. What are aggregate functions in SQL?
 
 Aggregate functions perform **calculations on multiple rows of data** and return a **single summarized value**.
 
@@ -19,7 +31,9 @@ FROM employees;
 
 This query returns the **average salary of all employees**.
 
-# Q 2. Difference between COUNT(*) and COUNT(column).
+---
+
+## Q 2. Difference between COUNT(*) and COUNT(column).
 
 Both are used to count rows, but they treat **NULL values differently**.
 
@@ -51,7 +65,9 @@ FROM employees;
 * `COUNT(*)` → counts every row
 * `COUNT(column)` → ignores `NULL` values in that column
 
-# Q 3. What does SUM() return if all values are NULL?
+---
+
+## Q 3. What does SUM() return if all values are NULL?
 
 If all values in a column are `NULL`, the `SUM()` function returns **NULL**.
 
@@ -78,7 +94,9 @@ SELECT COALESCE(SUM(bonus), 0)
 FROM employees;
 ```
 
-# Q 4. Difference between AVG() and SUM()/COUNT().
+---
+
+## Q 4. Difference between AVG() and SUM()/COUNT().
 
 Both are used to calculate the **average value**, but they are written differently.
 
@@ -112,7 +130,9 @@ FROM employees;
 * `SUM()/COUNT()` gives the same result but is written manually
 
 
-# Q 5. Write a query to calculate total sales per customer.
+---
+
+## Q 5. Write a query to calculate total sales per customer.
 
 Use the `SUM()` function with `GROUP BY` to calculate total sales for each customer.
 
@@ -131,7 +151,9 @@ GROUP BY customer_id;
 * Returns total sales per customer.
 
 
-# Q 6. Find average salary department-wise.
+---
+
+## Q 6. Find average salary department-wise.
 
 Use `AVG()` with `GROUP BY` to calculate the average salary for each department.
 
@@ -149,7 +171,9 @@ GROUP BY department;
 * `GROUP BY department` groups employees by department
 * Returns the average salary for each department.
 
-# Q 7. Why can’t we use aggregate functions in WHERE?
+---
+
+## Q 7. Why can’t we use aggregate functions in WHERE?
 
 Aggregate functions cannot be used in `WHERE` because `WHERE` filters rows **before aggregation happens**.
 
@@ -177,7 +201,9 @@ GROUP BY department
 HAVING COUNT(*) > 5;
 ```
 
-# Q 8. What is the use of HAVING?
+---
+
+## Q 8. What is the use of HAVING?
 
 `HAVING` is used to **filter grouped data after aggregation**.
 
@@ -201,7 +227,9 @@ HAVING COUNT(*) > 5;
 * Groups employees by department
 * Shows only departments with **more than 5 employees**.
 
-# Q 9. HAVING vs WHERE with example.
+---
+
+## Q 9. HAVING vs WHERE with example.
 
 Both are used to filter data, but they work at different stages of a query.
 
@@ -238,7 +266,9 @@ HAVING COUNT(*) > 5;
 * `HAVING` → filters grouped/aggregated results
 
 
-# Q 10. Count number of orders per customer.
+---
+
+## Q 10. Count number of orders per customer.
 
 Use `COUNT()` with `GROUP BY` to calculate the number of orders for each customer.
 
