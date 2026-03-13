@@ -1,4 +1,12 @@
-# Q 1. How do you extract year from date?
+<div align="center">
+
+
+# 📅⏱️ DATE & TIME FUNCTIONS
+**Date & Time Functions** help you extract, manipulate, and analyze date or time values in a dataset. 📅⏱️
+
+</div>
+
+## Q 1. How do you extract year from date?
 
 You can extract the **year part from a date** using the `YEAR()` function.
 
@@ -21,7 +29,7 @@ FROM orders;
 | 2025-03-10 | 2025       |
 
 ---
-# Q 2. Difference between GETDATE() and CURRENT_DATE.
+## Q 2. Difference between GETDATE() and CURRENT_DATE.
 
 Both are used to get the **current date**, but they are used in different database systems.
 
@@ -53,7 +61,7 @@ SELECT CURRENT_DATE;
 * `CURRENT_DATE` → only date (MySQL, PostgreSQL)
 
 ---
-# Q 3. Find records from last 30 days.
+## Q 3. Find records from last 30 days.
 
 Use date functions to filter records from the **last 30 days**.
 
@@ -79,7 +87,7 @@ WHERE order_date >= DATEADD(DAY, -30, GETDATE());
 * Common in **sales and activity reports**.
 
 ---
-# Q 4. Calculate age from DOB.
+## Q 4. Calculate age from DOB.
 
 Use date functions to calculate the **age from a date of birth (DOB)**.
 
@@ -105,7 +113,7 @@ FROM employees;
 * Calculates the **age in years** based on the current date.
 
 ---
-# Q 5. Difference between DATE and DATETIME.
+## Q 5. Difference between DATE and DATETIME.
 
 Both are data types used to store date values, but they store different levels of detail.
 
@@ -137,7 +145,7 @@ SELECT DATETIME('2025-03-11 10:30:00');
 * `DATETIME` → stores **date + time**
 
 ---
-# Q 6. Find month-wise sales.
+## Q 6. Find month-wise sales.
 
 Use date functions with `GROUP BY` to calculate total sales for each month.
 
@@ -157,7 +165,7 @@ GROUP BY MONTH(order_date);
 * `GROUP BY` groups results by each month.
 
 ---
-# Q 7. How do you handle time zones?
+## Q 7. How do you handle time zones?
 
 Time zones are handled by **converting timestamps from one time zone to another** using built-in SQL functions.
 
@@ -182,8 +190,7 @@ FROM orders;
 * Prevents issues with global applications.
 
 ---
-# Q 8. What is DATEDIFF?
-### What is `DATEDIFF`?
+## Q 8. What is DATEDIFF?
 
 `DATEDIFF` is a SQL function used to **calculate the difference between two dates**.
 
@@ -209,7 +216,7 @@ FROM orders;
 This calculates **how many days it took to deliver each order**.
 
 ---
-# Q 9. Find difference between two dates.
+## Q 9. Find difference between two dates.
 
 Use the `DATEDIFF` function to calculate the **difference between two dates**.
 
@@ -231,7 +238,7 @@ SELECT DATEDIFF('2025-03-11', '2025-03-01') AS date_difference;
 * Commonly used for **delivery time, age, or duration calculations**.
 
 ---
-# Q 10. Common date issues in SQL reports.
+## Q 10. Common date issues in SQL reports.
 
 Date-related problems are common in reporting and data analysis.
 
