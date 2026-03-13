@@ -3,6 +3,7 @@
 
 # 🔢 AGGREGATE FUNCTIONS  
 
+**SQL Aggregate Functions** summarize multiple rows of data into a single result (like total, average, max, or min). 📊
 
 </div>
 
