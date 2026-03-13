@@ -6,6 +6,7 @@
 
 </div>
 
+---
 ## Q 1. How SQL is used in Power BI?
 
 SQL is used in Power BI to **retrieve, filter, and prepare data from databases** before creating reports and dashboards.
