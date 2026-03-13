@@ -1,4 +1,12 @@
-# Q 1. How do you handle NULL values?
+<div align="center">
+
+
+# 🧹📊 DATA CLEANING & HANDLING NULLS 
+**Data Cleaning & Handling NULLs ensures** your dataset is accurate by fixing errors, removing duplicates, and managing missing values. 🧹📊
+
+</div>
+
+## Q 1. How do you handle NULL values?
 
 NULL values represent **missing or unknown data**. SQL provides functions and conditions to manage them.
 
@@ -28,8 +36,7 @@ Aggregate functions like `SUM()` and `AVG()` automatically **ignore NULL values*
 * Important for **data cleaning and accurate reports**.
 
 ---
-# Q 2. What is COALESCE?
-### What is `COALESCE`?
+## Q 2. What is COALESCE?
 
 `COALESCE` is a SQL function used to **return the first non-NULL value** from a list of values.
 
@@ -58,7 +65,7 @@ FROM customers;
 This returns the **first available contact number**.
 
 ---
-# Q 3. Difference between COALESCE and ISNULL.
+## Q 3. Difference between COALESCE and ISNULL.
 
 Both functions are used to **replace NULL values**, but they work slightly differently.
 
@@ -94,7 +101,7 @@ FROM employees;
 * `ISNULL` → mainly used in **SQL Server**
 
 ---
-# Q 4. Replace NULL salary with 0.
+## Q 4. Replace NULL salary with 0.
 
 You can replace `NULL` values using `COALESCE()` or `ISNULL()`.
 
@@ -118,7 +125,7 @@ FROM employees;
 * Useful for **reports and calculations** where NULL values cause issues.
 
 ---
-# Q 5. Remove duplicate records.
+## Q 5. Remove duplicate records.
 
 Duplicates can be removed using **`ROW_NUMBER()` with a CTE or subquery**.
 
@@ -141,7 +148,7 @@ WHERE rn > 1;
 * Rows with `rn > 1` are deleted.
 
 ---
-# Q 6. How do you identify duplicates?
+## Q 6. How do you identify duplicates?
 
 Duplicates can be identified using `GROUP BY` and `HAVING`.
 
@@ -161,7 +168,7 @@ HAVING COUNT(*) > 1;
 * `HAVING COUNT(*) > 1` shows duplicate values.
 
 ---
-# Q 7. Trim spaces from a column.
+## Q 7. Trim spaces from a column.
 
 Use the `TRIM()` function to remove **extra spaces from the beginning and end** of a string.
 
@@ -189,7 +196,7 @@ FROM customers;
 Trimming spaces helps **clean text data before analysis or reporting**.
 
 ---
-# Q 8. Convert text to upper/lower case.
+## Q 8. Convert text to upper/lower case.
 
 Use the `UPPER()` and `LOWER()` functions to change the case of text.
 
@@ -214,7 +221,7 @@ FROM customers;
 * Useful for **data cleaning and standardization**.
 
 ---
-# Q 9. Data cleaning importance in BI.
+## Q 9. Data cleaning importance in BI.
 
 Data cleaning is important in Business Intelligence (BI) because it ensures **accurate, reliable, and meaningful insights**.
 
@@ -236,7 +243,7 @@ FROM customers;
 This cleans data by **removing extra spaces and standardizing text format**.
 
 ---
-# Q 10. Real-world data cleaning example.
+## Q 10. Real-world data cleaning example.
 
 In real projects, raw data often contains **duplicates, NULL values, and inconsistent formats**. Data cleaning prepares it for analysis.
 
