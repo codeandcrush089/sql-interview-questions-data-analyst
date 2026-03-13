@@ -1,4 +1,12 @@
-# Q 1. What is indexing?
+<div align="center">
+
+
+# ⚡🚀 PERFORMANCE & OPTIMIZATION
+**Performance & Optimization** focuses on improving query speed and efficiency to handle large datasets better. ⚡🚀
+
+</div>
+
+## Q 1. What is indexing?
 
 Indexing is a database technique used to **improve the speed of data retrieval** from a table.
 
@@ -21,7 +29,7 @@ ON employees(name);
 * Queries searching by `name` will run **faster**.
 
 ---
-# Q 2. Types of indexes.
+## Q 2. Types of indexes.
 
 Indexes are used to **speed up data retrieval** in a database. The main types are:
 
@@ -65,7 +73,7 @@ ON users(email);
 Indexes improve **query performance**, especially for large tables.
 
 ---
-# Q 3. When not to use indexes?
+## Q 3. When not to use indexes?
 
 Indexes improve query performance, but in some cases they should be avoided.
 
@@ -86,7 +94,7 @@ If a column is not used in `WHERE`, `JOIN`, or `ORDER BY`, indexing is unnecessa
 Use indexes mainly on columns frequently used in **searching, filtering, or joining data**.
 
 ---
-# Q 4. How do indexes improve performance?
+## Q 4. How do indexes improve performance?
 
 Indexes improve query performance by allowing the database to **locate data quickly without scanning the entire table**.
 
@@ -115,7 +123,7 @@ WHERE name = 'Rahul';
 Because the database can **use the index to find rows quickly**.
 
 ---
-# Q 5. What is query optimization?
+## Q 5. What is query optimization?
 
 Query optimization is the process of **improving SQL queries so they run faster and use fewer resources**.
 
@@ -148,7 +156,7 @@ WHERE department = 'Sales';
 Use **indexes, proper filtering, and optimized joins** to improve query performance.
 
 ---
-# Q 6. Difference between clustered and non-clustered index.
+## Q 6. Difference between clustered and non-clustered index.
 
 Both indexes improve query performance, but they store data differently.
 
@@ -185,7 +193,7 @@ ON employees(name);
 | Faster for range queries    | Faster for specific lookups   |
 
 ---
-# Q 7. How to improve slow SQL query?
+## Q 7. How to improve slow SQL query?
 
 Slow queries can be improved by optimizing how the database retrieves and processes data.
 
@@ -227,7 +235,7 @@ Check how the database executes the query and optimize accordingly.
 Efficient indexing, proper filtering, and optimized joins can **significantly improve query performance**.
 
 ---
-# Q 8. Explain execution plan.
+## Q 8. Explain execution plan.
 
 An **execution plan** shows how the database engine **executes a SQL query step by step**.
 
@@ -257,7 +265,7 @@ WHERE department = 'Sales';
 Developers use execution plans to **optimize slow SQL queries**.
 
 ---
-# Q 9. Why SELECT * is bad?
+## Q 9. Why SELECT * is bad?
 
 Using `SELECT *` retrieves **all columns from a table**, which can reduce query performance and clarity.
 
@@ -287,7 +295,7 @@ FROM employees;
 Always select **only the required columns** for better performance.
 
 ---
-# Q 10. SQL best practices for BI reports.
+## Q 10. SQL best practices for BI reports.
 
 Following SQL best practices helps create **faster and more reliable BI reports**.
 
