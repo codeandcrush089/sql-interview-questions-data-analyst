@@ -1,4 +1,12 @@
-# Q 1. What is GROUP BY?
+<div align="center">
+
+
+# 📊🔎 GROUP BY & HAVING
+**GROUP BY & HAVING** are used to group rows with similar values and filter aggregated results. 📊🔎
+
+</div>
+
+## Q 1. What is GROUP BY?
 
 `GROUP BY` is used to **group rows with the same values** in a column and apply aggregate functions like `COUNT()`, `SUM()`, or `AVG()`.
 
@@ -18,7 +26,8 @@ GROUP BY department;
 
 This query returns the **number of employees in each department**.
 
-# Q 2. What happens if you miss GROUP BY in aggregate query?
+---
+## Q 2. What happens if you miss GROUP BY in aggregate query?
 
 If you use aggregate functions with other columns **without `GROUP BY`**, the query will usually return an **error**.
 
@@ -43,8 +52,8 @@ SELECT department, COUNT(*)
 FROM employees
 GROUP BY department;
 ```
-
-# Q 3. Can we use GROUP BY on multiple columns?
+---
+## Q 3. Can we use GROUP BY on multiple columns?
 
 Yes, `GROUP BY` can be used with **multiple columns** to group data based on the combination of those columns.
 
@@ -64,7 +73,8 @@ GROUP BY department, job_title;
 
 This query returns the **number of employees for each job title within each department**.
 
-# Q 4. Difference between GROUP BY and DISTINCT.
+---
+## Q 4. Difference between GROUP BY and DISTINCT.
 
 Both are used to remove duplicate values, but their purpose is different.
 
@@ -98,7 +108,8 @@ GROUP BY department;
 * `DISTINCT` → removes duplicate values
 * `GROUP BY` → groups data for aggregation
 
-# Q 5. Find total sales by year and month.
+---
+## Q 5. Find total sales by year and month.
 
 Use date functions with `GROUP BY` to summarize sales by year and month.
 
@@ -118,7 +129,8 @@ GROUP BY YEAR(order_date), MONTH(order_date);
 * `MONTH()` extracts the month
 * `SUM()` calculates total sales for each month.
 
-# Q 6. Show departments having more than 10 employees.
+---
+## Q 6. Show departments having more than 10 employees.
 
 Use `GROUP BY` with `HAVING` to filter departments based on the number of employees.
 
@@ -137,7 +149,8 @@ HAVING COUNT(*) > 10;
 * `COUNT(*)` counts employees in each department
 * `HAVING` filters departments with more than 10 employees.
 
-# Q 7. Can HAVING be used without GROUP BY?
+---
+## Q 7. Can HAVING be used without GROUP BY?
 
 Yes, `HAVING` can be used without `GROUP BY`, but it is typically used with **aggregate functions**.
 
@@ -156,7 +169,8 @@ HAVING COUNT(*) > 100;
 
 This query returns the result only if the **total number of employees is greater than 100**.
 
-# Q 8. GROUP BY execution order.
+---
+## Q 8. GROUP BY execution order.
 
 In SQL, queries are executed in a **logical order**, not the order they are written.
 
@@ -184,7 +198,8 @@ ORDER BY department;
 
 * `GROUP BY` happens **after WHERE but before HAVING**.
 
-# Q 9. Find highest salary in each department.
+---
+## Q 9. Find highest salary in each department.
 
 Use the `MAX()` aggregate function with `GROUP BY` to find the highest salary in every department.
 
@@ -202,7 +217,8 @@ GROUP BY department;
 * `GROUP BY department` groups employees by department
 * Result shows the **top salary in each department**.
 
-# Q 10. Common mistakes with GROUP BY.
+---
+## Q 10. Common mistakes with GROUP BY.
 
 These are common errors beginners make when using `GROUP BY`.
 
