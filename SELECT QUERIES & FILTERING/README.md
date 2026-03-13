@@ -1,4 +1,13 @@
-# Q 1. Write a query to fetch all records from a table.
+<div align="center">
+
+
+# 🔍📊 SELECT QUERIES & FILTERING
+**SELECT Queries & Filtering** are used to retrieve specific data from a table and filter results based on conditions. 🔍📊
+
+</div>
+
+---
+## Q 1. Write a query to fetch all records from a table.
 
 To retrieve all rows and columns from a table, we use the `SELECT` statement with `*`.
 
@@ -16,7 +25,8 @@ FROM employees;
 
 This query returns **every record stored in the table**.
 
-# Q 2. How do you select distinct values from a column?
+---
+## Q 2. How do you select distinct values from a column?
 
 Use the `DISTINCT` keyword to return **unique values** from a column.
 
@@ -39,8 +49,8 @@ FROM employees;
 SELECT DISTINCT department, job_title
 FROM employees;
 ```
-
-# Q 3. Difference between = and IN.
+---
+## Q 3. Difference between = and IN.
 
 Both are used to filter data in SQL, but they work differently.
 
@@ -73,7 +83,8 @@ WHERE department IN ('Sales', 'HR', 'IT');
 * `=` → Single value comparison
 * `IN` → Multiple possible values in one condition
 
-# Q 4. What is BETWEEN and when would you use it?
+---
+## Q 4. What is BETWEEN and when would you use it?
 
 `BETWEEN` is used to filter values **within a specific range**.
 It includes both the starting and ending values.
@@ -98,7 +109,8 @@ WHERE salary BETWEEN 30000 AND 60000;
 * Works with numbers, dates, and text
 * Makes range conditions easier to read
 
-# Q 5. How does LIKE work? Explain % and _.
+---
+## Q 5. How does LIKE work? Explain % and _.
 
 `LIKE` is used in SQL to search for a **pattern in text data**.
 
@@ -131,7 +143,8 @@ WHERE name LIKE '_a%';
 * Helpful for pattern matching
 * Common in search and filtering text data 🔎
 
-# Q 16. Write a query to fetch employees whose salary is between 30,000 and 60,000.
+---
+## Q 6. Write a query to fetch employees whose salary is between 30,000 and 60,000.
 
 Use the `BETWEEN` operator to filter values within a range.
 
@@ -148,7 +161,8 @@ WHERE salary BETWEEN 30000 AND 60000;
 * `BETWEEN` includes both 30000 and 60000
 * Useful for filtering ranges like salary, dates, or prices.
 
-# Q 7. How do you filter records with NULL values?
+---
+## Q 7. How do you filter records with NULL values?
 
 In SQL, `NULL` values cannot be checked using `=`.
 We use `IS NULL` or `IS NOT NULL`.
@@ -175,7 +189,8 @@ WHERE manager_id IS NOT NULL;
 * Use `IS NOT NULL` to filter valid data
 * `=` does not work with `NULL` values.
 
-# Q 8. What happens if you use WHERE on an aggregate function?
+---
+## Q 8. What happens if you use WHERE on an aggregate function?
 
 You **cannot use aggregate functions** like `COUNT()`, `SUM()`, `AVG()` directly in the `WHERE` clause.
 This will cause an **error** because `WHERE` filters rows **before aggregation**.
@@ -203,7 +218,8 @@ HAVING COUNT(*) > 5;
 * `WHERE` → filters rows
 * `HAVING` → filters aggregated results.
 
-# Q 9. Fetch top 5 highest-paid employees.
+---
+## Q 9. Fetch top 5 highest-paid employees.
 
 To get the highest-paid employees, sort salaries in **descending order** and limit the results.
 
@@ -229,7 +245,8 @@ ORDER BY salary DESC;
 * `ORDER BY salary DESC` → highest salaries first
 * `LIMIT / TOP` → restricts results to top 5 rows.
 
-# Q 10. Difference between AND and OR with examples.
+---
+## Q 10. Difference between AND and OR with examples.
 
 Both are logical operators used in the `WHERE` clause to filter data.
 
