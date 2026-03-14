@@ -1,4 +1,15 @@
-# Q 1. What is SQL and why is it important for Data Analysts?
+<div align="center">
+
+
+# 🧠💾 SQL BASICS & FUNDAMENTALS  
+
+**SQL Basics & Fundamentals** cover the core concepts needed to understand and work with databases using SQL. 🧠💾
+
+</div>
+
+---
+
+## Q 1. What is SQL and why is it important for Data Analysts?
 
 **SQL (Structured Query Language)** is a programming language used to communicate with relational databases. It allows users to **store, retrieve, filter, update, and analyze data** efficiently.
 
@@ -48,7 +59,8 @@ SQL enables analysts to quickly generate reports and insights for business decis
 
 SQL is the **core skill for Data Analysts** because it helps them access, analyze, and transform raw data into meaningful insights. 📊
 
-# Q 2. Difference between SQL and MySQL.
+---
+## Q 2. Difference between SQL and MySQL.
 
 **SQL (Structured Query Language)** is a standard language used to query and manage data in relational databases.
 **MySQL** is a database management system that uses SQL to store and manage data.
@@ -68,7 +80,8 @@ SELECT * FROM customers;
 
 This SQL query can run in **MySQL, PostgreSQL, SQL Server,** and other SQL-based databases.
 
-# Q 3. What are DDL, DML, DCL, TCL commands? Give examples.
+---
+## Q 3. What are DDL, DML, DCL, TCL commands? Give examples.
 
 These are categories of SQL commands used to manage and control databases.
 
@@ -140,7 +153,8 @@ Example
 ROLLBACK;
 ```
 
-# Q 4. What is a primary key? Can it contain NULL values?
+---
+## Q 4. What is a primary key? Can it contain NULL values?
 
 A **Primary Key** is a column (or set of columns) that uniquely identifies each row in a table.
 
@@ -162,8 +176,8 @@ CREATE TABLE employees (
 
 Here, `id` uniquely identifies every employee and **cannot be NULL or duplicated**.
 
-
-# Q 5. What is a foreign key and why is it used?
+---
+## Q 5. What is a foreign key and why is it used?
 
 A **Foreign Key** is a column in one table that refers to the **Primary Key of another table**. It creates a relationship between the two tables.
 
@@ -185,7 +199,8 @@ CREATE TABLE orders (
 
 Here, `customer_id` links the **orders** table to the **customers** table.
 
-# Q 6. Difference between DELETE, TRUNCATE, and DROP.
+---
+## Q 6. Difference between DELETE, TRUNCATE, and DROP.
 
 These commands are used to remove data or database objects, but they work differently.
 
@@ -233,7 +248,8 @@ DROP TABLE employees;
 | DROP     | Yes                 | Yes                     | No            |
 
 
-# Q 7. What is the difference between WHERE and HAVING?
+---
+## Q 7. What is the difference between WHERE and HAVING?
 
 Both are used to filter data, but they work at different stages of a query.
 
@@ -269,7 +285,8 @@ HAVING COUNT(*) > 5;
 * `WHERE` → filters rows
 * `HAVING` → filters grouped results
 
-# Q 8. Difference between CHAR and VARCHAR.
+---
+## Q 8. Difference between CHAR and VARCHAR.
 
 Both are used to store text data in SQL, but they handle storage differently.
 
@@ -318,8 +335,8 @@ CREATE TABLE users (
 );
 ```
 
-
-# Q 9. What is NULL? How is it different from zero or blank?
+---
+## Q 9. What is NULL? How is it different from zero or blank?
 
 **NULL** represents a **missing or unknown value** in a database. It means the value is not stored or not available.
 
@@ -344,7 +361,8 @@ This query finds employees who **do not have a manager assigned**.
 * `NULL` cannot be compared using `=`
 * Use `IS NULL` or `IS NOT NULL`.
 
-# Q 10. Can a table have multiple primary keys?
+---
+## Q 10. Can a table have multiple primary keys?
 
 No, a table can have **only one Primary Key**.
 However, that primary key can consist of **multiple columns**, called a **composite primary key**.
