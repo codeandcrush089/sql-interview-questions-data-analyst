@@ -1,4 +1,15 @@
-# Q 1. What are window functions?
+<div align="center">
+
+
+# 📊🪟 WINDOW FUNCTIONS 
+
+**Window Functions** perform calculations across a set of related rows while keeping each row’s details. 📊🪟
+
+</div>
+
+---
+
+## Q 1. What are window functions?
 
 Window functions perform **calculations across a set of rows related to the current row** without grouping the result.
 
@@ -25,8 +36,7 @@ FROM employees;
 This query ranks employees based on **salary**.
 
 ---
-# Q 2. Difference between GROUP BY and WINDOW functions.
-### Difference between `GROUP BY` and Window Functions
+## Q 2. Difference between GROUP BY and WINDOW functions.
 
 Both are used for calculations on data, but they behave differently.
 
@@ -62,8 +72,7 @@ FROM employees;
 * Window functions → calculate values while keeping all rows intact
 
 ---
-# Q 3. What is OVER() clause?
-### What is `OVER()` clause?
+## Q 3. What is OVER() clause?
 
 The `OVER()` clause is used with **window functions** to define the **set of rows (window)** on which the function operates.
 
@@ -84,7 +93,7 @@ FROM employees;
 This query ranks employees based on **salary without grouping the rows**.
 
 ---
-# Q 4. Difference between ROW_NUMBER, RANK, DENSE_RANK.
+## Q 4. Difference between ROW_NUMBER, RANK, DENSE_RANK.
 
 These are **window functions** used to assign rankings to rows.
 
@@ -134,7 +143,7 @@ FROM employees;
 * `DENSE_RANK()` → same rank **without skipping numbers**
 
 ---
-# Q 5. Find running total of sales.
+## Q 5. Find running total of sales.
 
 A running total shows the **cumulative sum of sales** as rows progress.
 
@@ -154,7 +163,7 @@ FROM sales;
 * Each row shows the **total sales up to that point**.
 
 ---
-# Q 6. Find highest salary per department using window function.
+## Q 6. Find highest salary per department using window function.
 
 Use a window function with `PARTITION BY` to calculate the highest salary within each department.
 
@@ -173,7 +182,7 @@ FROM employees;
 * Each row shows the employee salary and the department’s highest salary.
 
 ---
-# Q 7. What is PARTITION BY?
+## Q 7. What is PARTITION BY?
 
 `PARTITION BY` is used in **window functions** to divide rows into groups (partitions) so calculations are performed **within each group**.
 
@@ -194,7 +203,7 @@ FROM employees;
 This query ranks employees **within each department**.
 
 ---
-# Q 8. Can we use window functions in WHERE?
+## Q 8. Can we use window functions in WHERE?
 
 No, window functions **cannot be used directly in the `WHERE` clause**.
 
@@ -224,7 +233,7 @@ WHERE salary_rank <= 5;
 * Window functions must be used **in SELECT or ORDER BY**, not in `WHERE`.
 
 ---
-# Q 9. Use case of window functions in Power BI.
+## Q 9. Use case of window functions in Power BI.
 
 Window functions are used in SQL to **prepare data before loading it into Power BI** for analysis and reporting.
 
@@ -262,7 +271,7 @@ FROM employees;
 Using window functions in SQL helps **reduce Power BI calculations and improves performance**.
 
 ---
-# Q 10. Why window functions are faster?
+## Q 10. Why window functions are faster?
 
 Window functions are often faster because they **perform calculations without grouping or reducing rows**.
 
